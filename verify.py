@@ -53,12 +53,13 @@ def verify():
             vhash = vhash.replace("\n", "") # Replace newline
             txt_data = "%s|%s" % (name, email)
 
-            if vhash == verificationhash and (txt_data not in mails_verified):
-                mails_verified += "%s\n" % (txt_data)
+            if vhash == verificationhash:
+                if (txt_data not in mails_verified):
+                    mails_verified += "%s\n" % (txt_data)
 
-                f = open("mails_verified.txt", "w")
-                f.write(mails_verified[:-1])
-                f.close()
+                    f = open("mails_verified.txt", "w")
+                    f.write(mails_verified[:-1])
+                    f.close()
                 verified = True
                 break
 
