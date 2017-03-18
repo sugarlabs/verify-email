@@ -32,7 +32,11 @@ def verify():
     f.close()
 
     for line in mails_data:
-        mail_addresses.append(line.split("|"))
+        try:
+            mail_addresses.append(line.split("|"))
+        except:
+            # bad format line
+            pass
 
     # name|email
     f = open("mails_verified.txt", "r")
