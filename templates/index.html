@@ -1,0 +1,38 @@
+<head>
+    <title>Sugar Labs Email verification</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <style>
+    .content {
+        margin: 0;
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    footer {
+        position: fixed;
+        left: 50%;
+        bottom: 2%;
+        transform: translate(-50%, -50%);
+    }
+    </style>
+</head>
+
+<body>
+    <center>
+    <div class="content">
+        <img src="/static/img/sugarlabs.svg" style="width: 350px;"/>
+        <h3 style="margin: 5px; color: gray;">Email verification</h3>
+        {% if verified  %}
+        <h2 style="margin:0; padding:0;">{{ name }}<h3 style="margin:0; padding:0;">Your email address has been verified</h3></h2>
+        {% else %}
+        <h3 style="margin:0; padding:0;">Please click the link sent to your mail address<br>to verify your account</h3>
+        {% endif %}
+    </div>
+
+    <footer>
+    If you find any error please contact us<br><a href="mailto:systems@lists.sugarlabs.org">systems@lists.sugarlabs.org</a>
+    </footer>
+
+    </center>
+</body>
