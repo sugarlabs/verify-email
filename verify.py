@@ -15,6 +15,10 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>
 
+import sys
+reload(sys)
+sys.setdefaultencoding('utf-8')
+
 import json
 from flask import Flask
 from flask import render_template
