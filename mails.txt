@@ -1,0 +1,3 @@
+Ignacio Rodríguez|ignacio@sugarlabs.org|cd140b93-0fd9-4f6c-b6e2-520dc5d0856f
+Laura Victoria Vargas|laura@somosazucar.org|1536ab6e-1cf3-47df-bb80-4bb874478dcc
+Samson Goddy|samsongoddy@sugarlabs.org|1e625a3b-955b-4088-ace0-e7743bf205dc

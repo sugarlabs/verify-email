@@ -22,6 +22,7 @@ from flask import request
 
 app = Flask(__name__)
 
+
 @app.route('/')
 def verify():
     mail_addresses = []
@@ -50,7 +51,7 @@ def verify():
     if verificationhash:
         for user_data in mail_addresses:
             name, email, vhash = user_data
-            vhash = vhash.replace("\n", "") # Replace newline
+            vhash = vhash.replace("\n", "")  # Replace newline
             txt_data = "%s|%s" % (name, email)
 
             if vhash == verificationhash:
@@ -58,7 +59,7 @@ def verify():
                     mails_verified += "%s\n" % (txt_data)
 
                     f = open("mails_verified.txt", "w")
-                    f.write(mails_verified[:-1])
+                    f.write(mails_verified)
                     f.close()
                 verified = True
                 break
