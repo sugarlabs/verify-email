@@ -9,8 +9,7 @@ msgtxt = """
 <html>
   <head></head>
     <body>
-    <p>*this is a test*<br>Hi {name}, please verify your Sugar Labs mail address by clicking the link below</p><br>
-    <b><a href="{url}">Confirm email</a></b>
+    <p>*this is a test*<br>Hi {name}, please verify your Sugar Labs mail address by clicking the link below<br><b><a href="{url}">Confirm email</a></b></p>
 
     <small>If you are not able to click the link, please copy this address into your web browser:<br>
     <b>{url}</b>
