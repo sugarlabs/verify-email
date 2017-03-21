@@ -32,7 +32,7 @@ def verify():
     mail_addresses = []
 
     # name|email|verificationhash
-    f = open("mails.txt", "r")
+    f = open("/srv/verify/mails.txt", "r")
     mails_data = f.readlines()
     f.close()
 
@@ -44,7 +44,7 @@ def verify():
             pass
 
     # name|email
-    f = open("mails_verified.txt", "r")
+    f = open("/srv/verify/mails_verified.txt", "r")
     mails_verified = f.read()
     f.close()
 
@@ -62,7 +62,7 @@ def verify():
                 if (txt_data not in mails_verified):
                     mails_verified += "%s\n" % (txt_data)
 
-                    f = open("mails_verified.txt", "w")
+                    f = open("/srv/verify/mails_verified.txt", "w")
                     f.write(mails_verified)
                     f.close()
                 verified = True
@@ -75,4 +75,4 @@ def verify():
 
 
 if __name__ == '__main__':
-    app.run(debug=True, host="0.0.0.0", port=5001)
+    app.run(debug=True)
